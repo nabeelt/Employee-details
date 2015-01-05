@@ -1,0 +1,111 @@
+*{
+	padding: 0;
+	margin:0;
+}
+@font-face{
+   font-family: 'kaushan';
+   src: url("../fonts/KaushanScript-Regular.otf");}
+body{
+	height: 100%;
+	width:100%;
+	
+}
+#mainpage{
+	height: 100%;
+	width:100%;
+	
+}
+#employee_header{
+	height: 98px;
+	border-bottom: 1px solid black;
+	background: linear-gradient(to bottom,rgb(22, 111, 152),rgb(19, 50, 90));
+}
+h1{
+	font-family: 'kaushan';
+	margin-left: 3%;
+    padding: 2% 0;
+	text-shadow: 1px 1px 1px rgb(64, 64, 111);
+	color: wheat;
+}
+#employee_header span{
+	font-size: 17px;
+}
+/*table, tr, th{
+	border: 1px solid #000000;
+    border-collapse: collapse;
+    margin-left: 19%;
+    margin-top: 12%;
+    font-family: monospace;
+}
+th{
+	height: 35px;
+    width: 154px;
+    background: rgb(78, 194, 236);
+}*/
+#tablemain{
+    margin: auto;
+    padding-top: 44px;
+     width: 771px;
+}
+table, tr, th {
+    border: 1px solid #000000;
+    border-collapse: collapse;
+    font-family: monospace;
+}
+#foot{
+	background-color: #193861;
+    height: 77px;
+   position: absolute;
+   bottom: 0px;
+    text-align: center;
+    width: 100%;
+}
+#tab {
+    margin-top: 13px;
+    padding: 17px 0;
+    width: 100%;
+}
+.link{
+	margin-top: 10px;
+	margin-bottom: 3px;
+}
+p1 {
+color: wheat;
+font-family: monospace;
+font-weight: 600;
+}
+h2 {
+     float: right;
+    font-family: monospace;
+    font-size: 19px;
+    margin-right: 29px;
+}
+h3 {
+   float: left;
+    font-family: monospace;
+    font-size: 19px;
+    margin-bottom: 28px;
+    margin-left: 21px;
+}
+th{
+	background:linear-gradient(to bottom, #0088BA, #286FA1, #087090) repeat scroll 0 0 rgba(0, 0, 0, 0);
+	height: 33px;
+	color: white;
+}
+td{
+	border-right: 1px solid black;
+	padding: 14px 0 4px 13px;
+	background: none repeat scroll 0 0 #E4E4E4;
+}
+#search_field{
+	
+	border: 1px solid #E49B45;
+	border-radius: 4px;
+	box-shadow: 0 0 2px #D7AA75;
+	margin-left: 7px;
+	padding: 3px 4px;
+}
+#select{
+	padding: 5px 6px;
+	background: bisque;
+}

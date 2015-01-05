@@ -1,0 +1,50 @@
+<!DOCTYPE Html>
+<html>
+      <head>
+      	    <link rel="stylesheet" type="text/css" href="../css/employee.css">
+      </head>
+      	    <body>
+      	        <div id="mainpage">
+	      	        <header id="employee_header">
+	      	    		<h1>Employee Details</h1>
+	      	    	</header>
+	      	    	<div id="tablemain">
+	      	    	<h2 id="sort"><select name="Sort by" id="select" onclick="sortBy()">
+                                        <option value="" disabled="disabled" selected="selected">Sort by</option>
+                                        <option value="1" onclick="sortname()">Name</option>
+                                        <option value="2" onclick="sortage()">Age</option>
+                                        <option value="2" onclick="sortdob()">Date of birth</option>
+                                        <option value="2" onclick="sortdesig()">Designation</option>
+                                        <option value="2" onclick="sortsalary()">Salary</option>
+                                    </select></h2>
+	      	    	<h3 id="search">search :</h3><input type="text" name="search" id="search_field">
+	      	    	<table id="tab">
+	      	    		<tr>
+	      	    			<th>name</th>
+	      	    			<th>Age</th>
+	      	    			<th>Date of birth</th>
+	      	    			<th>Designation</th>
+	      	    			<th>Salary</th>
+	      	    		</tr>
+	      	    		
+	      	    	</table>
+		      	    </div>
+		      	    <footer id="foot">
+	 					    <div class="link">
+								<img id="img1" src="../images/facebook.svg" height="30px" width="30px" onclick="window.location='https://facebook.com'" >
+								<img  id="img1" src="../images/mzl.rhgvwgrk.png" height="30px" width="30px" onclick="window.location='https://linkedin.co.in'">
+								<img id="img1" src="../images/twitter_Social-Media-Icons-Buttons-Modern_black_Ctrl-Alt-Design_001.png" height="30px" width="30px" onclick="window.location='https://twitter.com'">
+								<img id="img1" src="../images/mailblack.png" height="30px" width="30px" onclick="window.location='https://gmail.co.in'">
+					   		</div>
+	 					     <p1> 2009-2014 Rdio, Inc. All rights reserved. </p1>
+
+		      	    	</footer>
+	
+      	    	</div>
+      	    <script src="../js/jquery-1.11.2.js"></script>
+      	    
+      	    <script type="text/javascript" src="../json/employee.json"></script>
+      	    <script type="text/javascript" src="../js/employee.js"></script>
+
+      	    </body>
+</html>

@@ -1,0 +1,38 @@
+{
+	"employees": [
+	{
+		"Name":"Anju",
+		"Age":"25" , 
+		"DOB":"01/02/1990" ,
+		"Designation":"Softwre Engineer" ,
+		 "Salary":"20000"
+	} ,
+	{
+		"Name":"Aparna" ,
+		"Age":"21" ,
+		"DOB":"18/05/1993" ,
+		"Designation":"Softwre Engineer" ,
+		"Salary":"20000"
+	} ,
+	{
+		"Name":"John" ,
+		"Age":"30" ,
+		"DOB":"14/03/1985" ,
+		"Designation":"HR" ,
+		"Salary":"30000"		
+	},
+	{
+		"Name":"Haritha" ,
+		"Age":"28" ,
+		"DOB":"26/01/1987" ,
+		"Designation":"System Admin" ,
+		"Salary":"30000"		
+	},
+	{
+		"Name":"Shankar" ,
+		"Age":"35" ,
+		"DOB":"11/11/1980" ,
+		"Designation":"Business Analyst" ,
+		"Salary":"28000"		
+	}
+]}
