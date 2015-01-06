@@ -1,12 +1,24 @@
 {
     "tabheader": [
         {
-            "h1": "EmployeeName",
-            "type": "string",
-            "h2": "Age",
-            "h3": "DOB",
-            "h4": "Designation",
-            "h5": "Salary"
+            "header":"Name",
+            "type":"string"
+        },
+        {
+            "header":"Age",
+            "type":"number"
+        },
+        {
+            "header":"DOB",
+            "type":"date"
+        },
+        {
+            "header":"Designation",
+            "type":"string"
+        },
+        {
+            "header":"Salary",
+            "type":"number"
         }
     ],
     "employees": [

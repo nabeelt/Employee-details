@@ -1,16 +1,14 @@
 $(document).ready(function () {
 
 	$.getJSON("../json/emp.json", function(getdetails) {
-		$.each(getdetails.tabheader , function(key,value) {
-			var row = $("<tr />");
-			console.log(value);
-			$("#tab").append(row);
-			row.append ($("<th>" + value.h1 + "</th>" ));
-			row.append($("<th>" + value.h2 + "</th>"));
-			row.append($("<th>" + value.h3 + "</th>"));
-			row.append($("<th>" + value.h4 + "</th>"));
-			row.append($("<th>" + value.h5 + "</th>"));
-		});
+
+		//adding headers
+		var fields = getdetails.tabheader;
+		var row = $("<tr />");
+		$("#tab").append(row);
+		for(var i=0; i<fields.length; i++) {
+			row.append($("<th>" + fields[i].header + "</th>"));
+		}
 		$.each(getdetails.employees , function(key,value) {
 			var row = $("<tr />");
 			console.log(value);
