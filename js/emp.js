@@ -236,15 +236,6 @@ for(var i=1;i<=(count-1);i++)
 }
 function sortDob(){
 
-// 	array.sort(function (dobarray[0], dobarray[1]) {
-//   function parseDate(dobarray) {
-//     var parts = dobarray.match(/(\d+)/g);
-//     // assumes M/D/Y date format
-//     return new Date(parts[2], parts[0]-1, parts[1]); // months are 0-based
-//   }
-//   return parseDate(dobarray[0]) - parseDate(dobarray[1]);
-// });
-
 	for (var k=0;k<(count-1);k++)
     {    
        for (var j=0;j<(count-k-1);j++)

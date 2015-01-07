@@ -109,11 +109,11 @@ td{
 }
 #search_field{
 	
-	border: 1px solid #E49B45;
-	/* border-radius: 4px; */
-	box-shadow: 0 0 2px #D7AA75;
-	padding: 4px 1px;
-	/* margin-bottom: -6px; */
+	border: 0px solid #E49B45;
+/* border-radius: 4px; */
+box-shadow: 0 0 2px #D7AA75;
+padding: 8px 13px;
+ margin-bottom: 15px; 
 	
 }
 #select{
