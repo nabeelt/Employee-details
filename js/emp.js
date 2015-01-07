@@ -11,7 +11,7 @@ $(document).ready(function () {
 		}
 		$.each(getdetails.employees , function(key,value) {
 			var row = $("<tr />");
-			console.log(value);
+			console.log("" + value.dob + "");
 			$("#tab").append(row);
 			row.append ($("<td>" + value.Name + "</td>" ));
 			row.append($("<td>" + value.Age + "</td>"));
@@ -20,4 +20,5 @@ $(document).ready(function () {
 			row.append($("<td>" + value.Salary + "</td>"));
 		});
 	});
+
 });
