@@ -48,7 +48,7 @@ th{
 	width: 771px;
 }
 table, tr, th {
-    border: 1px solid #000000;
+    border: 1px solid white;
     border-collapse: collapse;
     font-family: monospace;
 }
@@ -78,14 +78,14 @@ h2 {
      float: right;
     font-family: monospace;
     font-size: 19px;
-    margin-right: 29px;
+    /*margin-right: 29px;*/
 }
 #search {
 	float: left;
 	font-family: verdana;
 	font-size: 11px;
 	font-weight: normal;
-	margin-left: 21px;
+	/*margin-left: 21px;*/
 	border: 1px solid rgb(228, 148, 53);
 	background: bisque;
 	padding: 5px 6px;
@@ -96,7 +96,7 @@ th{
 	color: white;
 }
 td{
-	border-right: 1px solid black;
+	border-right: 1px solid white;
 	padding: 14px 0 4px 13px;
 	background: none repeat scroll 0 0 #E4E4E4;
 }
@@ -113,4 +113,8 @@ td{
 #select{
 	padding: 5px 6px;
 	background: bisque;
+}
+table th :hover {
+	cursor: pointer;
+
 }
