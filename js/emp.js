@@ -11,7 +11,6 @@ $(document).ready(function () {
 		}
 		$.each(getdetails.employees , function(key,value) {
 			var row = $("<tr />");
-			console.log(value);
 			$("#tab").append(row);
 			row.append ($("<td>" + value.Name + "</td>" ));
 			row.append($("<td>" + value.Age + "</td>"));

@@ -1,42 +1,72 @@
 <!DOCTYPE Html>
-<html style="height:100%;">
-      <head>
-      	    <link rel="stylesheet" type="text/css" href="../css/employee.css">
-      </head>
-      	    <body>
-      	        <div id="mainpage">
-	      	        <header id="employee_header">
-	      	    		
-	      	    	</header>
-	      	    	<h1>Employee Details</h1>
-	      	    	<div id="tablemain">
-	      	    	<h2 id="sort"><select name="Sort by" id="select" onclick="sortBy()">
-                                        <option value="" disabled="disabled" selected="selected">Sort by</option>
-                                        <option value="1">Name</option>
-                                        <option value="2">Age</option>
-                                        <option value="3">Date of birth</option>
-                                        <option value="4">Designation</option>
-                                        <option value="5">Salary</option>
-                                    </select></h2>
-	      	    	<h3 id="search">search</h3><input type="text" name="search" id="search_field">
-	      	    	<table id="tab"></table>
-		      	    </div>
-		      	    <footer id="foot">
-	 					    <div class="link">
-								<img id="img1" src="../images/facebook.svg" height="30px" width="30px" onclick="window.location='https://facebook.com'" >
-								<img  id="img1" src="../images/mzl.rhgvwgrk.png" height="30px" width="30px" onclick="window.location='https://linkedin.co.in'">
-								<img id="img1" src="../images/twitter_Social-Media-Icons-Buttons-Modern_black_Ctrl-Alt-Design_001.png" height="30px" width="30px" onclick="window.location='https://twitter.com'">
-								<img id="img1" src="../images/mailblack.png" height="30px" width="30px" onclick="window.location='https://gmail.co.in'">
-					   		</div>
-	 					     <p1> 2009-2014 Rdio, Inc. All rights reserved. </p1>
+<html>
+     <head>
+      	<link rel="stylesheet" type="text/css" href="../css/employee.css">
+     </head>
+     <body>
+      	<div id="mainpage">
+  	        <header id="employee_header">
+  	    		<h1>Employee Details</h1>
+  	    	</header>
+  	    	<div id="tablemain">
+  	    	<h2 id="sort"><select name="Sort by" id="select" onclick="sortBy()">
+                                <option value="" disabled="disabled" selected="selected">Sort by</option>
+                                <option value="1">Name</option>
+                                <option value="2">Age</option>
+                                <option value="3">Date of birth</option>
+                                <option value="4">Designation</option>
+                                <option value="5">Salary</option>
+                            </select></h2>
+  	    	<input type="text" name="search" id="search_field" placeholder="Type to Search">
+  	    	<table id="tab"></table>
+      	    </div>
+      	    <footer id="foot">
+				<div class="link">
+					<img id="img1" src="../images/facebook.svg" height="30px" width="30px" onclick="window.location='https://facebook.com'" >
+					<img  id="img1" src="../images/mzl.rhgvwgrk.png" height="30px" width="30px" onclick="window.location='https://linkedin.co.in'">
+					<img id="img1" src="../images/twitter_Social-Media-Icons-Buttons-Modern_black_Ctrl-Alt-Design_001.png" height="30px" width="30px" onclick="window.location='https://twitter.com'">
+					<img id="img1" src="../images/mailblack.png" height="30px" width="30px" onclick="window.location='https://gmail.co.in'">
+			   	</div>
+				<p1> 2009-2014 Rdio, Inc. All rights reserved. </p1>
 
-		      	    	</footer>
-	           <!--  <img src="../images/abstract-wallpapers-blurred-wallpaper-wallpaper-35390.jpg"> -->
-      	    	
-				<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-				<script type="text/javascript" src="../json/emp.json"></script>
-				<script type="text/javascript" src="../js/emp.js"></script>
-				<script type="text/javascript" src="../js/sort.js"></script>
- 			</div>
-      	    </body>
+      	    </footer>
+	
+      	</div>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script type="text/javascript" src="../json/emp.json"></script>
+		<script type="text/javascript" src="../js/emp.js"></script>
+		<script type="text/javascript" src="../js/sort.js"></script>
+		<script>
+		$(document).ready(function()
+		{
+			$('#search_field').keyup(function()
+	{
+		searchTable($(this).val());
+	});
+});
+
+function searchTable(inputVal)
+{
+	var table = $('#tab');
+	table.find('tr').each(function(index, row)
+	{
+		var allCells = $(row).find('td');
+		if(allCells.length > 0)
+		{
+			var found = false;
+			allCells.each(function(index, td)
+			{
+				var regExp = new RegExp(inputVal, 'i');
+				if(regExp.test($(td).text()))
+				{
+					found = true;
+					return false;
+				}
+			});
+			if(found == true)$(row).show();else $(row).hide();
+		}
+	});
+}
+    </script></body>
+
 </html>
