@@ -11,11 +11,11 @@
 	      	    	<div id="tablemain">
 	      	    	<h2 id="sort"><select name="Sort by" id="select" onclick="sortBy()">
                                         <option value="" disabled="disabled" selected="selected">Sort by</option>
-                                        <option value="1" onclick="sortname()">Name</option>
-                                        <option value="2" onclick="sortage()">Age</option>
-                                        <option value="2" onclick="sortdob()">Date of birth</option>
-                                        <option value="2" onclick="sortdesig()">Designation</option>
-                                        <option value="2" onclick="sortsalary()">Salary</option>
+                                        <option value="1">Name</option>
+                                        <option value="2">Age</option>
+                                        <option value="3">Date of birth</option>
+                                        <option value="4">Designation</option>
+                                        <option value="5">Salary</option>
                                     </select></h2>
 	      	    	<h3 id="search" onClick="searchTable()">search</h3><input type="text" name="search" id="search_field">
 	      	    	<table id="tab"></table>
@@ -32,11 +32,10 @@
 		      	    	</footer>
 	
       	    	</div>
-      	  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-
-      	    
-      	    <script type="text/javascript" src="../json/emp.json"></script>
-      	    <script type="text/javascript" src="../js/emp.js"></script>
+				<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+				<script type="text/javascript" src="../json/emp.json"></script>
+				<script type="text/javascript" src="../js/emp.js"></script>
+				<script type="text/javascript" src="../js/sort.js"></script>
 
       	    </body>
 </html>

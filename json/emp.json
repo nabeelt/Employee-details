@@ -23,7 +23,7 @@
     ],
     "employees": [
     {
-        "Name":"Anju",
+        "Name":"anu",
         "Age":"25" , 
         "DOB":"01/02/1990" ,
         "Designation":"Softwre Engineer" ,
@@ -37,7 +37,7 @@
         "Salary":"20000"
     } ,
     {
-        "Name":"John" ,
+        "Name":"aaa" ,
         "Age":"30" ,
         "DOB":"14/03/1985" ,
         "Designation":"HR" ,
