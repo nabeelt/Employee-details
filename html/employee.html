@@ -1,8 +1,8 @@
 <!DOCTYPE Html>
 <html>
-      <head>
-      	    <link rel="stylesheet" type="text/css" href="../css/employee.css">
-      </head>
+     <head>
+      	<link rel="stylesheet" type="text/css" href="../css/employee.css">
+     </head>
       	    <body>
       	        <div id="mainpage">
 	      	        <header id="employee_header">
@@ -17,7 +17,7 @@
                                         <option value="4">Designation</option>
                                         <option value="5">Salary</option>
                                     </select></h2>
-	      	    	<h3 id="search" onClick="searchTable()">search</h3><input type="text" name="search" id="search_field">
+	      	    	<button id="search" onClick="searchTable()">search</button><input type="text" name="search" id="search_field">
 	      	    	<table id="tab"></table>
 		      	    </div>
 		      	    <footer id="foot">
@@ -36,6 +36,20 @@
 				<script type="text/javascript" src="../json/emp.json"></script>
 				<script type="text/javascript" src="../js/emp.js"></script>
 				<script type="text/javascript" src="../js/sort.js"></script>
-
+				<script type="text/javascript">
+						
+						function searchTable() {
+						    var $rows = $('#tab');
+						    var val = '^(?=.*\\b' + $.trim($(this).val()).split(/\s+/).join('\\b)(?=.*\\b') + ').*$',
+						        reg = RegExp(val, 'i'),
+						        text;
+						    
+						    $rows.show().filter(function() {
+						        text = $(this).text().replace(/\s+/g, ' ');
+						        return !reg.test(text);
+						    }).hide();
+						});
+					}
+				</script>
       	    </body>
 </html>
