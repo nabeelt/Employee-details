@@ -12,11 +12,12 @@
             "header":"DOB",
             "type":"date"
         },
+        
         {
-            "header":"Designation",
+         "header":"Designation",
             "type":"string"
         },
-        {
+         {
             "header":"Salary",
             "type":"number"
         }
@@ -31,7 +32,7 @@
         "Salary":"20000"
     } ,
     {
-        "Name":"Nikhil" ,
+        "Name":"Nsikhil" ,
         "Age":"21" ,
         "DOB":"18/05/1993" ,
         "Designation":"Softwre Engineer" ,
