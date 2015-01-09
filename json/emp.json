@@ -2,36 +2,32 @@
     "tabheader": [
         {
             "header":"Name",
-            "name":"Name",
             "type":"string"
             
         },
         {
             "header":"Age",
-            "name":"Age",
             "type":"number"
         },
         {
             "header":"DOB",
-            "name":"DOB",
             "type":"date"
         },
         
         {
             "header":"Designation",
-            "name":"Designation",
             "type":"string"
         },
          {
             "header":"Salary",
-            "name":"Salary",
             "type":"number"
         }
+
     ],
     
     "employees": [
     {
-        "Name":"sheik",
+        "Name":"Sheik",
         "Age":"25" , 
         "DOB":"01/02/1990" ,
         "Designation":"Softwre Engineer" ,

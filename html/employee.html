@@ -2,6 +2,7 @@
 <html style="height:100%;">
      <head>
       	<link rel="stylesheet" type="text/css" href="../css/employee.css">
+         <link rel="stylesheet" type="text/css" href="../css/fontello.css">    
      </head>
      <body>
       	<div id="mainpage">
@@ -10,14 +11,7 @@
   	    	</header>
   	    	<h1>Employee Details</h1>
   	    	<div id="tablemain">
-  	    	<h2 id="sort"><select name="Sort by" id="select">
-                               <option value="" disabled="disabled" selected="selected">Sort by</option>
-                                 <!-- <option value="1">Name</option>
-                                <option value="2">Age</option>
-                                <option value="3">Date of birth</option>
-                                <option value="4">Designation</option>
-                                <option value="5">Salary</option> -->
-                            </select></h2>
+  	    	
   	    	<input type="text" name="search" id="search_field" placeholder="Type to Search">
   	    	<table id="tab"></table>
       	    </div>
@@ -34,18 +28,17 @@
 	
       	</div>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-		<script type="text/javascript" src="../json/emp.json"></script>
-		<script type="text/javascript" src="../js/emp.js"></script>
-		<script type="text/javascript" src="../js/sort.js"></script>
+		<script src="../js/emp.js"></script>
+		<script src="../js/sort.js"></script>
+
 		<script>
-		$(document).ready(function()
-		{
+		$(document).ready(function() {
+
 			$('#search_field').keyup(function()
 			{
 				searchTable($(this).val());
 			});
 		});
-
 		function searchTable(inputVal)
 		{
 			var table = $('#tab');
@@ -70,6 +63,7 @@
 				}
 			});
 		}
+		
     	</script>
     </body>
 </html>

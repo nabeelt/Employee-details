@@ -105,7 +105,7 @@ th{
 td{
 	border-right: 1px solid white;
 	padding: 14px 0 4px 13px;
-	background: none repeat scroll 0 0 #E4E4E4;
+	background: none repeat scroll 0 0 rgba(228, 228, 228, 0.4);
 }
 #search_field{
 	
