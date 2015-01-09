@@ -3,6 +3,7 @@
         {
             "header":"Name",
             "type":"string"
+            
         },
         {
             "header":"Age",
@@ -14,18 +15,19 @@
         },
         
         {
-         "header":"Designation",
+            "header":"Designation",
             "type":"string"
         },
          {
             "header":"Salary",
             "type":"number"
         }
+
     ],
     
     "employees": [
     {
-        "Name":"sheik",
+        "Name":"Sheik",
         "Age":"25" , 
         "DOB":"01/02/1990" ,
         "Designation":"Softwre Engineer" ,
