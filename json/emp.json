@@ -2,23 +2,29 @@
     "tabheader": [
         {
             "header":"Name",
+            "name":"Name",
             "type":"string"
+            
         },
         {
             "header":"Age",
+            "name":"Age",
             "type":"number"
         },
         {
             "header":"DOB",
+            "name":"DOB",
             "type":"date"
         },
         
         {
-         "header":"Designation",
+            "header":"Designation",
+            "name":"Designation",
             "type":"string"
         },
          {
             "header":"Salary",
+            "name":"Salary",
             "type":"number"
         }
     ],

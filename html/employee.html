@@ -10,13 +10,13 @@
   	    	</header>
   	    	<h1>Employee Details</h1>
   	    	<div id="tablemain">
-  	    	<h2 id="sort"><select name="Sort by" id="select" onclick="sortBy()">
-                                <option value="" disabled="disabled" selected="selected">Sort by</option>
-                                <option value="1">Name</option>
+  	    	<h2 id="sort"><select name="Sort by" id="select">
+                               <option value="" disabled="disabled" selected="selected">Sort by</option>
+                                 <!-- <option value="1">Name</option>
                                 <option value="2">Age</option>
                                 <option value="3">Date of birth</option>
                                 <option value="4">Designation</option>
-                                <option value="5">Salary</option>
+                                <option value="5">Salary</option> -->
                             </select></h2>
   	    	<input type="text" name="search" id="search_field" placeholder="Type to Search">
   	    	<table id="tab"></table>
@@ -41,33 +41,35 @@
 		$(document).ready(function()
 		{
 			$('#search_field').keyup(function()
-	{
-		searchTable($(this).val());
-	});
-});
-
-function searchTable(inputVal)
-{
-	var table = $('#tab');
-	table.find('tr').each(function(index, row)
-	{
-		var allCells = $(row).find('td');
-		if(allCells.length > 0)
-		{
-			var found = false;
-			allCells.each(function(index, td)
 			{
-				var regExp = new RegExp(inputVal, 'i');
-				if(regExp.test($(td).text()))
+				searchTable($(this).val());
+			});
+		});
+
+		function searchTable(inputVal)
+		{
+			var table = $('#tab');
+			table.find('tr').each(function(index, row)
+			{
+				var allCells = $(row).find("td:first-child");
+				if(allCells.length > 0)
 				{
-					found = true;
-					return false;
+					var found = false;
+					allCells.each(function(index, td)
+					{	
+						console.log(index , td);	
+						var reg = '^' + inputVal;
+						var regExp = new RegExp(reg, 'i');
+						if(regExp.test($(td).text()))
+						{
+							found = true;
+							return false;
+						}
+					});
+					if(found == true)$(row).show();else $(row).hide();
 				}
 			});
-			if(found == true)$(row).show();else $(row).hide();
 		}
-	});
-}
-    </script></body>
-
+    	</script>
+    </body>
 </html>
