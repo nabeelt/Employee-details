@@ -30,7 +30,9 @@ $(document).ready(function () {
 		//adding label and input fields to the form
 
 		for(i=0;i<fields.length;i++) {
-			$("#labelDiv").append($("<label>" + fields[i].header + "</label>" +"<br />"));
+
+			$("#labelDiv").append($("<label>" + fields[i].header + ":</label>" +"<br />"));
+
 			$("#inputDiv").append($("<input id = " +fields[i].name + " " + "type=" + fields[i].type +  " " + "name=" + fields[i].name + ">" ));
 		}
 

@@ -2,41 +2,11 @@
 	padding: 0;
 	margin:0;
 }
-header a {
-	text-decoration: none;
-	color:White;
-}
-#addEmpForm h1 {
-	color: #1CB7C3;
-}
-#labelDiv {
-	float: left;
-	margin: 30px 0px 10px 0px;
-	width: 30%;
-}
-#inputDiv {
-	float: left;
-	margin: 30px 0px 10px 0px;
-	width: 30%;
-	clear: right;
-}
-#labelDiv label {
-	line-height: 2.1em;
-	font-size: 18px;
-}
-#inputDiv input {
-	line-height: 1.9em;
-	margin:5px 0px;
-	width: 172px;
-	clear: right;
-}
-.button {
-	height: 30px;
-	width: 62px;
-	color:White;
-	background-color: black;
-	border-radius: 10px;
-}
+
+@font-face{
+   font-family: 'SinkinSans';
+   src: url("../fonts/SinkinSans-600SemiBold.otf");}
+
 @font-face{
    font-family: 'kaushan';
    src: url("../fonts/KaushanScript-Regular.otf");}
@@ -65,6 +35,56 @@ h1{
 	text-align: center;
 	text-decoration: underline;
 }
+header a {
+	text-decoration: none;
+color: wheat;
+float: right;
+/* padding: 30px 10px; */
+margin-top: 27px;
+margin-right: 26px;
+font-family: cursive;
+text-shadow: 1px 1px 1px rgb(18, 133, 137);
+}
+#addEmpForm h1 {
+	color: #1CB7C3;
+}
+#labelDiv {
+	float: left;
+	margin: 30px 0px 10px 0px;
+	width: 30%;
+	font-family: 'SinkinSans';
+}
+#inputDiv {
+	float: left;
+	margin: 30px 0px 10px 0px;
+	width: 30%;
+	clear: right;
+}
+#labelDiv label {
+	line-height: 44px;
+font-size: 12px;
+}
+#inputDiv input {
+	line-height: 1.9em;
+margin: 5px 0px;
+width: 172px;
+clear: right;
+border: 2px solid rgb(24, 121, 150);
+padding: 2px 5px;
+/* background: none; */
+box-shadow: 0px 0px 3px rgba(7, 31, 27, 0.21);
+}
+.button {
+	height: 30px;
+width: 79px;
+color: wheat;
+background-color: black;
+/* border-radius: 10px; */
+border: 1px solid bisque;
+background: linear-gradient(to bottom,black,grey);
+font-weight: bold;
+cursor: pointer;
+}
 #employee_header span{
 	font-size: 17px;
 }
@@ -86,6 +106,7 @@ th{
 	width: 60%;
 	float: right;
 	margin-right: 4%;
+	padding-top: 30px;
 }
 table, tr, th {
     border: 1px solid white;
@@ -98,13 +119,12 @@ table{
 }
 #foot{
 	background-color: #128589;
-
-	
-
-	text-align: center;
-	width: 100%;
-	float: left;
-
+height: 16%;
+text-align: center;
+width: 100%;
+/* float: left; */
+position: absolute;
+bottom: 0px;
 }
 #tab {
     margin-top: 13px;
@@ -209,7 +229,6 @@ h3{
 	width: 21%;
 	text-align: center;
 	height: 43%;
-	position: relative;
 	background: rgba(255, 254, 254, 0.24);
 	box-shadow: 0px 0px 3px black;
 }
@@ -262,3 +281,13 @@ p2 {
 	cursor: pointer;
 	margin-top: 8%;
 }
+
+#adddata{
+	height: 70%;
+width: 76%;
+margin-left: 157px;
+background-color: rgba(255, 255, 255, 0.44);
+border-bottom: 5px solid black;
+box-shadow: 0px -2px 12px black;
+}
+
