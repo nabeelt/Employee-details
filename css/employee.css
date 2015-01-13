@@ -2,6 +2,41 @@
 	padding: 0;
 	margin:0;
 }
+header a {
+	text-decoration: none;
+	color:White;
+}
+#addEmpForm h1 {
+	color: #1CB7C3;
+}
+#labelDiv {
+	float: left;
+	margin: 30px 0px 10px 0px;
+	width: 30%;
+}
+#inputDiv {
+	float: left;
+	margin: 30px 0px 10px 0px;
+	width: 30%;
+	clear: right;
+}
+#labelDiv label {
+	line-height: 2.1em;
+	font-size: 18px;
+}
+#inputDiv input {
+	line-height: 1.9em;
+	margin:5px 0px;
+	width: 172px;
+	clear: right;
+}
+.button {
+	height: 30px;
+	width: 62px;
+	color:White;
+	background-color: black;
+	border-radius: 10px;
+}
 @font-face{
    font-family: 'kaushan';
    src: url("../fonts/KaushanScript-Regular.otf");}
@@ -9,7 +44,8 @@ body{
 	height: 100%;
 	width:100%;
 	background:url(../images/home-1-ss-bg-2.jpg);
-	background-size: cover;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
 	}
 #mainpage{
 	height: 100%;
@@ -46,7 +82,7 @@ th{
 }*/
 #tablemain{
 	margin: auto;
-	padding-top: 60px;
+	/*padding-top: 60px;*/
 	width: 60%;
 }
 table, tr, th {
@@ -61,7 +97,7 @@ box-shadow: 0px 0px 7px
 #foot{
 	background-color: #128589;
 height: 112px;
-position: absolute;
+/*position: absolute;*/
 bottom: 0px;
 text-align: center;
 width: 100%;
