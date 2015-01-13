@@ -23,13 +23,15 @@
            "name":"Designation",
            "type":"string"
        },
-        {
-           "header":"Salary",
+
+       {
+          "header":"Salary",
            "name":"Salary",
            "type":"number"
-       }
 
-   ],
+       }
+    ],
+
 
     
     "employees": [
@@ -48,7 +50,7 @@
         "Salary":"20000"
     } ,
     {
-        "Name":"nishin" ,
+        "Name":"nabeel" ,
         "Age":"30" ,
         "DOB":"14/03/1985" ,
         "Designation":"HR" ,
@@ -67,6 +69,13 @@
         "DOB":"11/11/1980" ,
         "Designation":"Business Analyst" ,
         "Salary":"28000"        
+    },
+      {
+        "Name":"nishin" ,
+        "Age":"28" ,
+        "DOB":"26/01/1986" ,
+        "Designation":"System Admin" ,
+        "Salary":"30000"        
     }
     ]
 }

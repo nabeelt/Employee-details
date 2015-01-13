@@ -1,0 +1,58 @@
+<!DOCTYPE Html>
+<html style="height:100%;">
+<head>
+  	<link rel="stylesheet" type="text/css" href="../css/employee.css">
+    <link rel="stylesheet" type="text/css" href="../css/fontello.css"> 
+    <link rel="stylesheet" type="text/css" href="../css/as3.css">      
+</head>
+<body>
+	<div id="mainpage">
+        <header id="employee_header">
+        	<a href="employee1.html"><i class="icon-home"></i>HOME</a> 
+    	</header>
+    	<div id="adddata">
+	    	<h1>Add Employee Details</h1>
+
+	  	 	 <div id="tablemain">
+		  	    <form id="addEmpForm">
+		            <div id="formfields" style="overflow:hidden">
+		                <div id="labelDiv">
+
+		                </div>
+		                <div id="inputDiv">
+
+		                </div>
+					</div>
+	            	<div id="buttonDiv">
+	            	<input class ="button" id="addEmp" type="submit" onClick="addEmployees()" value="ADD"></div>
+	        	</form>
+			</div>
+		</div>
+	</div>
+  	<footer id="foot">
+		<div class="link">
+			<img id="img1" src="../images/facebook.svg" height="30px" width="30px" onclick="window.location='https://facebook.com'" >
+			<img  id="img1" src="../images/mzl.rhgvwgrk.png" height="30px" width="30px" onclick="window.location='https://linkedin.co.in'">
+			<img id="img1" src="../images/twitter_Social-Media-Icons-Buttons-Modern_black_Ctrl-Alt-Design_001.png" height="30px" width="30px" onclick="window.location='https://twitter.com'">
+			<img id="img1" src="../images/mailblack.png" height="30px" width="30px" onclick="window.location='https://gmail.co.in'">
+	   	</div>
+		<p1> 2009-2014 Rdio, Inc. All rights reserved. </p1>
+	</footer>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="../js/emp.js"></script>
+	<script>
+		function addEmployees(){
+			if( typeof(Storage) != "undefined") {
+				$("#formfields input").each(function() {
+					var getInputName = $(this).attr('name');
+					localStorage.setItem(getInputName , $(this).val());
+				});		 
+			}
+			else {
+		        document.getElementById("tablemain").innerHTML = "Sorry, your browser does not support web storage...";
+		    }
+		}
+	</script>
+</body>
+</html>
