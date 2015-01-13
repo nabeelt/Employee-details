@@ -10,11 +10,15 @@ $(document).ready(function () {
 		for(var i=0; i<fields.length; i++) {
 			row.append($("<th>" + fields[i].header + "<i class='icon-down-dir'></i><i class='icon-up-dir'></i></th>"));
 		    $(".icon-up-dir").hide();
+            }
 		
-		}
+		for(i=0;i<fields.length;i++) {
 
-		//adding employee details
-
+				$("#label_div").append($("<label>" + fields[i].header + ":</label>" +"<br />"));
+				$("#input_div").append($("<input id = " +fields[i].name + " " + "type=" + fields[i].type +  " " + "name=" + fields[i].name + ">" ));
+}
+         
+         //adding employee details
 		$.each(getdetails.employees , function(key,value) {
 			var row = $("<tr />");
 			$("#tab").append(row);
@@ -25,16 +29,39 @@ $(document).ready(function () {
 
 		});
 
+		// Adding ROWS
+		 $('#adddetails').on("click", function(){
+         var row = $("<tr />");
+		 $("#tab").append(row);
+       
+         $("#field input").each(function() {
+	         row.append ($("<td>" + $(this).val() + "</td>" ));
+			});
+	   });
+
+		  //clear row
+
+		  $('#clearrow').on("click", function(){
+			
+				if($('#tab tr').size()>1){
+				$('#tab tr:last-child').remove();
+				}
+				else{
+				alert('One row should be present in table');
+				}
+			});
+
+
 		//sorting
 
 	    $('#tab').on("click", "th", function(){
-				$(".icon-up-dir").toggle();
-		    $(".icon-down-dir").toggle();
-		var table = $(this).parents("table").eq(0);
-		var rows = table.find('tr').toArray();
-		rows.shift(); //remove first element which has th
-		console.log($(this).index());
-		var index=$(this).index();
+			$(".icon-up-dir").toggle();
+			$(".icon-down-dir").toggle();
+			var table = $(this).parents("table").eq(0);
+			var rows = table.find('tr').toArray();
+			rows.shift(); //remove first element which has th
+			console.log($(this).index());
+			var index=$(this).index();
 		$.each(getdetails.tabheader , function(key,header) {
 			if(index == key){
 
@@ -42,7 +69,7 @@ $(document).ready(function () {
 				console.log(headertype);
 			}
 		
-		if(headertype == "date") {
+		if(headertype == "date(dd/mm/yyyy)") {
 			console.log("inner");
 			var temp = new Array();
 
@@ -102,7 +129,6 @@ $(document).ready(function () {
 	}
     });
 	});
-    
-	
+        
 	});
 });

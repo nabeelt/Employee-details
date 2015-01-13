@@ -1,29 +1,36 @@
 {
-    "tabheader": [
+      "tabheader": [
+       {
+           "header":"Name",
+           "name":"Name",
+           "type":"string"
+           
+       },
+       {
+           "header":"Age",
+           "name":"Age",
+           "type":"number"
+       },
+       {
+           "header":"DOB",
+           "name":"DOB",
+           "type":"date(dd/mm/yyyy)"
+          
+       },
+       
+       {
+           "header":"Designation",
+           "name":"Designation",
+           "type":"string"
+       },
         {
-            "header":"Name",
-            "type":"string"
-            
-        },
-        {
-            "header":"Age",
-            "type":"number"
-        },
-        {
-            "header":"DOB",
-            "type":"date"
-        },
-        
-        {
-            "header":"Designation",
-            "type":"string"
-        },
-         {
-            "header":"Salary",
-            "type":"number"
-        }
+           "header":"Salary",
+           "name":"Salary",
+           "type":"number"
+       }
 
-    ],
+   ],
+
     
     "employees": [
     {

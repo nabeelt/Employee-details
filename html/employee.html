@@ -3,6 +3,7 @@
      <head>
       	<link rel="stylesheet" type="text/css" href="../css/employee.css">
          <link rel="stylesheet" type="text/css" href="../css/fontello.css">    
+     
      </head>
      <body>
       	<div id="mainpage">
@@ -10,11 +11,26 @@
   	    		
   	    	</header>
   	    	<h1>Employee Details</h1>
+  	    	<!-- <div class="addpeople">
+  	    		<h2>ADD PEOPLE </h2>
+  	    		<input type="text" name="ADD" id="add"> -->
+  	    		
+  	    	<!-- </div> -->
+  	    	<div id="addpeople">
+  	    		<p2>Add People</p2> <br>
+  	    		<div id="field">
+  	    		<div id="label_div"></div>
+  	    		<div id="input_div" ></div>
+  	    		</div>
+  	    		<input type="button" id="adddetails" value="Add">
+  	    		<input type="button" id="clearrow" value="clear">
+  	    	</div>
   	    	<div id="tablemain">
   	    	
   	    	<input type="text" name="search" id="search_field" placeholder="Type to Search">
   	    	<table id="tab"></table>
       	    </div>
+      	</div>    
       	    <footer id="foot">
 				<div class="link">
 					<img id="img1" src="../images/facebook.svg" height="30px" width="30px" onclick="window.location='https://facebook.com'" >
@@ -26,7 +42,7 @@
 
       	    </footer>
 	
-      	</div>
+      	
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 		<script src="../js/emp.js"></script>
 		<script src="../js/sort.js"></script>
