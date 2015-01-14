@@ -8,6 +8,7 @@
      <body>
       	<div id="mainpage">
   	        <header id="employee_header">
+  	        	<a href="add.html">Add more details</a>   
   	    	</header>
   	    	<h1>Employee Details</h1>
   	    	<!-- <div class="addpeople">
@@ -70,7 +71,7 @@
 					var found = false;
 					allCells.each(function(index, td)
 					{	
-						console.log(index , td);	
+					
 						var reg = '^' + inputVal;
 						var regExp = new RegExp(reg, 'i');
 						if(regExp.test($(td).text()))

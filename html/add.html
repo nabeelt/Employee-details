@@ -1,4 +1,4 @@
-<!DOCTYPE Html>
+<!DOCTYPE html>
 <html style="height:100%;">
 <head>
   	<link rel="stylesheet" type="text/css" href="../css/employee.css">
@@ -9,7 +9,7 @@
 <body>
 	<div id="mainpage">
         <header id="employee_header">
-        	<a href="employee1.html"><i class="icon-home"></i>HOME</a> 
+        	<a href="employee.html"><i class="icon-home"></i>HOME</a> 
     	</header>
     	<div id="adddata">
     	<h1>Add Employee Details</h1>
@@ -25,7 +25,7 @@
 	                </div>
 				</div>
             	<div id="buttonDiv">
-            	<input class ="button" id="addEmp" type="submit" onClick="addEmployees()" value="ADD">
+            	<input class ="button" id="addEmpBtn" type="submit" value="ADD">
             	</div>
         	</form>
 		</div>
@@ -45,17 +45,34 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script src="../js/emp.js"></script>
 	<script>
-		function addEmployees(){
-			if( typeof(Storage) != "undefined") {
-				$("#formfields input").each(function() {
-					var getInputName = $(this).attr('name');
-					localStorage.setItem(getInputName , $(this).val());
-				});		 
-			}
-			else {
-		        document.getElementById("tablemain").innerHTML = "Sorry, your browser does not support web storage...";
-		    }
-		}
+		// var i;
+
+		// alert(i + "frst");
+		// function addEmployees(){
+		// 	var values = {};
+		// 	if( typeof(Storage) != "undefined") {
+		// 		if(i ===  undefined){
+		// 			i=0;
+		// 		}
+		// 		alert(i + "add");
+		// 		i++;
+		// 		$("#formfields input").each(function() {
+		// 			var getInputName = $(this).attr('name');
+		// 			values[getInputName] = $(this).val();
+		// 			//localStorage.setItem(getInputName , $(this).val());
+		// 		});	
+		// 		saveData(i,values); 
+		// 	}
+		// 	else {
+		//         document.getElementById("tablemain").innerHTML = "Sorry, your browser does not support web storage...";
+		//     }
+		// }
+		// function saveData(i , values) {
+		// 	alert(i + "save");
+		// 	i = i;
+		// 	localStorage.setItem(i,JSON.stringify(values));
+
+		// }
 	</script>
 </body>
 </html>
