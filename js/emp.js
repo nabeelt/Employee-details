@@ -3,6 +3,7 @@ $(document).ready(function () {
 	$.getJSON("../json/emp.json", function(getdetails) {
 
 		//adding headers
+		var object=new Object();
 		var i = 0;
 		var fields = getdetails.tabheader;
 		var row = $("<tr />");
@@ -29,41 +30,61 @@ $(document).ready(function () {
 
 		});
 
+	      
+		$.each(getdetails.employees , function(key,value) {
+           
+           
+        object=value;
+        var row = $("<tr />");
+		$("#tab").append(row);  
+        var rowCount = $('#tab tr').length-1;	 
+	    localStorage.setItem('object', JSON.stringify(object));
+	    var retrievedObject = localStorage.getItem('object');
+	    console.log('retrievedObject: ', JSON.parse(retrievedObject));
+	  
+	    $.each(object,function(k,v) {
+            row.append ($("<td>" + v + "</td>" ));
+            console.log(v);
+         });
+	
+});
 		//adding label and input fields to the form
 
 		for(i=0;i<fields.length;i++) {
 
 			$("#labelDiv").append($("<label>" + fields[i].header + ":</label>" +"<br />"));
 
-			$("#inputDiv").append($("<input id = " +fields[i].name + " " + "type=" + fields[i].type +  " " + "name=" + fields[i].name + ">" ));
+			$("#inputDiv").append($("<input id = " +fields[i].name + " " + "type=" + fields[i].type +  " " + "name=" + fields[i].name +">" ));
 		}
 
 		//appending localStorage data to the table
 		
-		var row = $("<tr />");
-		$("#tab").append(row);
-		var values = {};
-		for (var i = 0; i < fields.length; i++){
-    		for(var j=0; j < localStorage.length ; j++) {
-    			if(fields[i].name == localStorage.key(j)) {
-    				var newf = localStorage.getItem(localStorage.key(j));
-					row.append ($("<td>" + newf + "</td>"));
-					console.log(newf);
-					//localStorage.removeItem(localStorage.key(j));
-				}
-    		}
+		// var row = $("<tr />");
+		// $("#tab").append(row);
+		// var values = {};
+		// for (var i = 0; i < fields.length; i++){
+  //   		for(var j=0; j < localStorage.length ; j++) {
+  //   			if(fields[i].name == localStorage.key(j)) {
+  //   				var newf = localStorage.getItem(localStorage.key(j));
+		// 			row.append ($("<td>" + newf + "</td>"));
+		// 			console.log(newf);
+		// 			//localStorage.removeItem(localStorage.key(j));
+		// 		}
+  //   		}
 
-		}
-
+		// }
+     
 		// Adding ROWS
 		 $('#adddetails').on("click", function(){
 	         var row = $("<tr />");
 			 $("#tab").append(row);
-	       
-	         $("#field input").each(function() {
+		         $("#field input").each(function() {
 		         row.append ($("<td>" + $(this).val() + "</td>" ));
 			});
+	   	var rowCount = $('#tab tr').length;
+		alert(rowCount);
 	   	});
+                
 
 		  //clear row
 
