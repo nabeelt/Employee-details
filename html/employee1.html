@@ -15,7 +15,7 @@
   	    	</header>
   	    	<h1>Employee Details</h1>
   	    	<div id="tablemain" style="float:none;margin:0px auto;">
-
+  	    	<input type="button" id="deleteRow" value="Delete Row">	
   	    	<input type="text" name="search" id="search_field" placeholder="Type to Search">
   	    	<table id="tab"></table>
       	    </div>	
@@ -58,7 +58,7 @@
 					var found = false;
 					allCells.each(function(index, td)
 					{	
-						console.log(index , td);	
+						
 						var reg = '^' + inputVal;
 						var regExp = new RegExp(reg, 'i');
 						if(regExp.test($(td).text()))

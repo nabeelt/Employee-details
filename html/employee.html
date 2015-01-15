@@ -8,6 +8,7 @@
      <body>
       	<div id="mainpage">
   	        <header id="employee_header">
+  	        	<a href="add.html">Add more details</a>   
   	    	</header>
   	    	<h1>Employee Details</h1>
   	    	<!-- <div class="addpeople">
@@ -21,11 +22,11 @@
   	    		<div id="label_div"></div>
   	    		<div id="input_div" ></div>
   	    		</div>
-  	    		<input type="button" id="adddetails" value="Add">
-  	    		<input type="button" id="clearrow" value="clear">
+  	    		<input type="submit" id="adddetails" value="Add">
+  	    		
   	    	</div>
   	    	<div id="tablemain">
-  	    	
+  	    	<input type="submit" id="clearrow" value="Delete row">
   	    	<input type="text" name="search" id="search_field" placeholder="Type to Search">
   	    	<table id="tab"></table>
       	    </div>
@@ -64,13 +65,14 @@
 			var table = $('#tab');
 			table.find('tr').each(function(index, row)
 			{
-				var allCells = $(row).find("td:first-child");
+				
+				var allCells = $(row).find(eq(1));
 				if(allCells.length > 0)
 				{
 					var found = false;
 					allCells.each(function(index, td)
 					{	
-						console.log(index , td);	
+					
 						var reg = '^' + inputVal;
 						var regExp = new RegExp(reg, 'i');
 						if(regExp.test($(td).text()))
@@ -84,7 +86,7 @@
 			});
 		}
 
-
+        // $('#foot').css('margin-top',$(document).height() - ($('#mainpage').height()) - $('#foot').height());
 		
     	</script>
     </body>
