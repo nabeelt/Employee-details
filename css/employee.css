@@ -17,7 +17,7 @@ body{
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 	}
-#mainpage{
+#mainpage , #addDetailsPage{
 	height: 100%;
 	width:100%;
 }
@@ -217,11 +217,9 @@ h3{
 	color: blanchedalmond;
 	font-family: cursive;
 	cursor: pointer;
-	float: left;
-	margin-left: 11%;
 	margin-top: 8%;
 }
-#addpeople{
+#mainpage #addEmpForm{
 	float: left;
 	margin-left: 105px;
 	margin-top: 6%;
@@ -251,9 +249,6 @@ p2 {
 #input_div{
 	line-height: 32px;
 }
-#field{
-	margin-top: 10%;
-}
 #input_div input{
 	border: 1px solid black;
 	height: 18px;
@@ -268,7 +263,7 @@ p2 {
 	color:  #353334;
 
 }
-#deleteRow{
+#clearrow{
 	width: 15%;
 	float: left;
 	height: 33px;
@@ -278,21 +273,7 @@ p2 {
 	color: blanchedalmond;
 	font-family: cursive;
 	cursor: pointer;
-}
-#clearrow{
-	width: 33%;
-	float: left;
-	left: 35%;
-	height: 12%;
-	border: 1px solid blanchedalmond;
-	background: linear-gradient(to bottom,black,grey);
-	border-radius: 1px;
-	color: blanchedalmond;
-	font-family: cursive;
-	cursor: pointer;
-	margin-top: 8%;
-}
-
+}	
 #adddata{
 	height: 70%;
 width: 76%;
@@ -301,4 +282,9 @@ background-color: rgba(255, 255, 255, 0.44);
 border-bottom: 5px solid black;
 box-shadow: 0px -2px 12px black;
 }
-
+[placeholder]:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+input:focus::-moz-placeholder {
+    color: transparent;
+}
