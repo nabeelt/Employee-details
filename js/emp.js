@@ -1,12 +1,5 @@
 $(document).ready(function () {
 
-	if(21>125){
-		console.log("greater");
-	}
-	else{
-		console.log("lesser");
-	}
-
 	$.getJSON("../json/emp.json", function(getdetails) {
 
 	//adding headers
@@ -102,18 +95,15 @@ $(document).ready(function () {
 		else {
 		    document.getElementById("tablemain").innerHTML = "Sorry, your browser does not support web storage...";
 		}
-		$("#Age").focusout(function() {
-
-			var getInputValue = $(this).val();
-			if(getInputValue < 1) {
-				alert("invalid Age");
-				$(this).val("");
-			}
-		});
 
 		$("#DOB").focusout(function() {
+			
 			var d=new Date();
-			var year = d.getFullYear();		   			   
+			var year = d.getFullYear();
+
+			var month = d.getMonth();
+			var date = d.getDate();
+
 			var getvalue = $(this).val();
 			var dataLength = getvalue.length;
 			dataLength = dataLength-4;
@@ -126,7 +116,8 @@ $(document).ready(function () {
 				mm = getvalue.substr(2,2);
 				y  = getvalue.substr(4,dataLength)
 				if (mm < 1 || mm > 12) {
-					alert("invalid date");
+
+					alert("invalid ");
 					$(this).val("");
 				}
 
@@ -148,7 +139,15 @@ $(document).ready(function () {
 					var isleap = (y % 4 == 0 && (y % 100 != 0 || y % 400 == 0));
 					if (dd> 29 || (dd ==29 && !isleap)) 
 						alert("invalid");$(this).val("");
-				}      
+				} 
+				else if (y == year)  {
+					if((mm-1) > month) {
+						alert("invalid date");$(this).val("");
+					}
+					else if (dd > date) {
+						alert("invalid date");$(this).val("");
+					}
+				}     
 
 				else{
 					$(this).val(dd+"/"+mm+"/"+y);
@@ -156,9 +155,19 @@ $(document).ready(function () {
 				}
 			}
 			else{
+
+				if(getvalue.match(/^(\d{1,2})(\-)(\d{1,2})(\-)(\d{4})$/)) {
+				dd= getvalue.split("-")[0];
+				mm = getvalue.split("-")[1];
+				y  = getvalue.split("-")[2];
+
+				alert(dd,mm,y);
+			}
+				if(getvalue.match(/^(\d{1,2})(\/)(\d{1,2})(\/)(\d{4})$/)){
 				dd= getvalue.split("/")[0];
 				mm = getvalue.split("/")[1];
 				y  = getvalue.split("/")[2];
+			}
 				if(dd.length < 2)
 				{
 				dd="0"+dd;
@@ -194,13 +203,62 @@ $(document).ready(function () {
 						alert("invalid date");
 					    $(this).val("");
 				    }
-				}      
+				}
+				else if (y == year)  {
+					if((mm-1) > month) {
+						alert("invalid date");$(this).val("");
+					}
+					else if (dd > date) {
+						alert("invalid date");$(this).val("");
+					}
+				}   
 
 				if($(this).val()!="") {
 					$(this).val(dd+"/"+mm+"/"+y);
+					console.log(dd , mm , y);
+					console.log(date , month , year);
+					ay = year - y;
+					am = month - (mm-1);
+					ad  = date - dd;
+					console.log(ad , am , ay);
+					if (am < 0 || (am == 0 && ad < 0)) {
+						if((parseInt(ay)-1) > 0){
+							document.getElementById("Age").value = parseInt(ay) - 1;
+						} else {
+							alert("Age must be greater than zero");
+						}
+					}
+					else {
+						if(parseInt(ay) > 0){
+							document.getElementById("Age").value = parseInt(ay);
+						} else {
+							alert("Age must be greater than zero");
+						}
+					}
 				}
 			}
-		});
+			// console.log(dd , mm , y);
+			// console.log(date , month , year);
+			// ay = year - y;
+			// am = month - (mm-1);
+			// ad  = date - dd;
+			// console.log(ay);
+			// console.log(am);
+			// console.log(ad);
+			// if (am < 0 || (am == 0 && ad < 0)) {
+			// 	alert("age = " +(parseInt(ay) - 1));
+			// }
+			// else {
+			// 	alert(ay);
+			// }
+
+			});
+			$("#Salary").focusout(function (){
+				salary = $(this).val();
+				if(salary < 0) {
+					alert("invalid salary");
+				}
+			});
 						
 	// Adding ROWS
 	// var values = {};
@@ -210,38 +268,7 @@ $(document).ready(function () {
 	//        $("#field input").each(function() {
 	//         row.append ($("<td>" + $(this).val() + "</td>" ));
 	// 	});
-	//   });
-
-	//clear row
-	  // 	$('#clearrow').on("click", function(){
-
-			// var rowCount=$("#tab tr").length;
-			// for(var i=0;i<rowCount;i++){
-			// 	var row=$("tab tr").rows[i];
-			// 	var chkbox=row.cells[5].childNodes[0];
-			// 	if( null != chkbox && true == chkbox.checked ){
-			// 		if(rowCount<=1){
-			// 			alert("Cannot delete all the rows.");
-			// 			break;
-			// 		}
-	  //               table.deleteRow(i);
-	  //               rowCount--;
-	  //               i--;
-	  //           }
-	  //       }
-			// if($('#tab tr').size()>1){
-			// 	$('#tab tr:last-child').remove();
-			// 	var d = parseInt(localStorage.getItem("index"));
-			// 	if(d) {
-			// 		d = d-1; 
-			// 		localStorage.removeItem(d);
-			// 		localStorage.setItem("index" , d);
-			// 	}
-			// }
-			// else{
-			// 	alert('One row should be present in table');
-			// }
-		//});
+	//  });
 
 	//sorting
 
