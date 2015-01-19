@@ -1,5 +1,5 @@
 <!DOCTYPE Html>
-<html style="height:100%;">
+<html>
      <head>
       	<link rel="stylesheet" type="text/css" href="../css/employee.css">
          <link rel="stylesheet" type="text/css" href="../css/fontello.css">    
@@ -11,22 +11,16 @@
   	        	<a href="add.html">Add more details</a>   
   	    	</header>
   	    	<h1>Employee Details</h1>
-  	    	<!-- <div class="addpeople">
-  	    		<h2>ADD PEOPLE </h2>
-  	    		<input type="text" name="ADD" id="add"> -->
-  	    		
-  	    	<!-- </div> -->
-  	    	<div id="addpeople">
+  	    	<form id="addEmpForm">
   	    		<p2>Add People</p2> <br>
-  	    		<div id="field">
-  	    		<div id="label_div"></div>
-  	    		<div id="input_div" ></div>
+  	    		<div id="formfields" style="margin-top:10%;">
+	  	    		<div id="label_div"></div>
+	  	    		<div id="input_div" ></div>
   	    		</div>
   	    		<input type="submit" id="adddetails" value="Add">
-  	    		
-  	    	</div>
+  	    	</form>
   	    	<div id="tablemain">
-  	    	<input type="submit" id="clearrow" value="Delete row">
+  	    	<input type="button" id="clearrow" value="Delete Row" onClick="deleteRow()">
   	    	<input type="text" name="search" id="search_field" placeholder="Type to Search">
   	    	<table id="tab"></table>
       	    </div>
@@ -54,25 +48,19 @@
 			{
 				searchTable($(this).val());
 			});
-// 			var values = {};
-// 			for (var i = 0; i < localStorage.length; i++){
-//     var newf = localStorage.getItem(localStorage.key(i));
-//     console.log(newf,"hjhj");
-// }
 		});
 		function searchTable(inputVal)
 		{
 			var table = $('#tab');
-			table.find('tr').each(function(index, row)
+			table.find('tr').each(function(index, row)			
 			{
-				
-				var allCells = $(row).find(eq(1));
+				var allCells = $(row).find("td:eq(1)");
 				if(allCells.length > 0)
 				{
 					var found = false;
+					index = index + 1;
 					allCells.each(function(index, td)
 					{	
-					
 						var reg = '^' + inputVal;
 						var regExp = new RegExp(reg, 'i');
 						if(regExp.test($(td).text()))
@@ -81,13 +69,13 @@
 							return false;
 						}
 					});
-					if(found == true)$(row).show();else $(row).hide();
+					if(found == true)
+						$(row).show();
+					else 
+						$(row).hide();
 				}
 			});
 		}
-
-        // $('#foot').css('margin-top',$(document).height() - ($('#mainpage').height()) - $('#foot').height());
-		
     	</script>
     </body>
 </html>

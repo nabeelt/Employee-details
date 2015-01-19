@@ -1,11 +1,14 @@
 {
       "tabheader": [
-       {},
+       {
+          "header" : "Select",
+          "name" : "Check",
+          "type": ""
+        } ,
        {
            "header":"Name",
            "name":"Name",
            "type":"string"
-
            
        },
        {
@@ -17,7 +20,6 @@
            "header":"DOB",
            "name":"DOB",
            "type":"date(dd/mm/yyyy)"
-           
           
        },
        
@@ -39,20 +41,23 @@
     
     "employees": [
     {
+        "Check" : "<input type=checkbox>",  
         "Name":"Sheik",
         "Age":"25" , 
         "DOB":"01/02/1990" ,
         "Designation":"Softwre Engineer" ,
-        "Salary":"20000"
+        "Salary":"1000"
     } ,
     {
+        "Check" : "<input type=checkbox>", 
         "Name":"Nikhil" ,
         "Age":"21" ,
         "DOB":"18/05/1993" ,
         "Designation":"Softwre Engineer" ,
-        "Salary":"20000"
+        "Salary":"22000"
     } ,
     {
+        "Check" : "<input type=checkbox>", 
         "Name":"nabeel" ,
         "Age":"30" ,
         "DOB":"14/03/1985" ,
@@ -60,25 +65,28 @@
         "Salary":"30000"        
     },
     {
+        "Check" : "<input type=checkbox>", 
         "Name":"anjana" ,
         "Age":"28" ,
         "DOB":"26/01/1987" ,
         "Designation":"System Admin" ,
-        "Salary":"30000"        
+        "Salary":"45000"        
     },
     {
+        "Check" : "<input type=checkbox>", 
         "Name":"anusree" ,
         "Age":"35" ,
         "DOB":"11/11/1980" ,
         "Designation":"Business Analyst" ,
-        "Salary":"28000"        
+        "Salary":"56000"        
     },
       {
-        "Name":"nishin" ,
+        "Check" : "<input type=checkbox>", 
+        "Name":"Hari" ,
         "Age":"28" ,
         "DOB":"26/01/1986" ,
         "Designation":"System Admin" ,
-        "Salary":"30000"        
+        "Salary":"15000"        
     }
     ]
 }
